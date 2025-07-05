@@ -1,0 +1,210 @@
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+body{ 
+  font-family: 'Trebuchet MS', sans-serif;
+  background: radial-gradient(circle at center, #0d1b2a 0%, #000 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   }
+   #wrapper {
+  text-align: center;
+  position: relative;
+}
+
+
+.wheel-wrapper {
+   flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wheel {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at center, #ffcc00, #ff9900);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+#game-container { 
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  }
+
+  .zone-centrale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+#spin-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #00adb5;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#spin-btn:hover {
+  background-color: #06d6a0;
+}
+
+header { 
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 15px; 
+  }
+#global-timer, #player-info { 
+  font-size: 1.2rem;
+ }
+main { 
+  display: flex; 
+  flex-wrap: wrap;
+   gap: 20px; 
+   justify-content: center; 
+  }
+
+#cards-zone, #deck-zone, #effects-zone {
+   background: #fff; 
+   border: 2px solid #ccc; 
+   border-radius: 8px; 
+   padding: 10px;
+   width: 300px;
+   min-height: 200px;
+   color :black;
+     }
+#deck, #effects, #current-card { 
+  display: flex; 
+  flex-wrap: wrap;
+   gap: 10px;
+    align-items: center;
+     justify-content: center; 
+    }
+#current-card { 
+  font-size: 2rem; 
+  color: #555;
+ }
+.card-icon {
+  width: 60px; height: 60px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 0.9rem; background: #eee;
+}
+
+.pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #ffd369;
+  animation: blink 1s infinite alternate;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+#orientation-warning {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 10px;
+  background: rgba(255, 165, 0, 0.9); /* orange doux */
+  border-radius: 8px;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  z-index: 999;
+  animation: fadeIn 0.5s ease;
+  text-align: center;
+}
+/* Animation douce */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  canvas {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+
+.wheel-wrapper {
+   flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wheel {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle at center, #ffcc00, #ff9900);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+#game-container { 
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  }
+  .zone-centrale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+#spin-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #00adb5;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#spin-btn:hover {
+  background-color: #06d6a0;
+}
+  canvas {
+    width: 750px;
+    height: 750px;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roue de 1000 points</title>
+    <link rel="stylesheet" href="La_Roue_Style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Roue de 1000 points</h1>
+        <div id="turn-indicator">Tour du Joueur</div>
+        <div class="scoreboard">
+          <span id="player-score">Joueur: 0</span>
+          <span id="ia-score">IA: 0</span>
+        </div>
+        <div class="wheel-wrapper">
+          <div class="pointer"></div>
+          <canvas id="wheel" width="400" height="400"></canvas>
+        </div>
+        <button id="spin-btn">Lancer la roue</button>
+        <div id="card-display">
+          <p id="card-owner">Carte pour : Joueur</p>
+          <div id="card-result"></div>
+        </div>
+      </div>
+
+      <!-- Fenêtre de victoire -->
+   <div id="victoryMessage" class="hidden">
+    <div class="victory-content">
+      <h2 id="winnerText">Joueur Gagnant !</h2>
+      <p>Félicitations ! Vous avez atteint 1000 points.</p>
+    </div>
+  </div>
+    
+</body>
+<script src="La_Roue_Carte.js"></script>
+</html>
