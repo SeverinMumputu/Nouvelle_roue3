@@ -237,7 +237,7 @@ function drawCurvedTitle(ctx, text, startAngle, endAngle, radius, color) {
   ctx.shadowColor = "black";
   ctx.shadowBlur = 4;
   ctx.textAlign = "center";
-  ctx.font = "bold 17px Orbitron";
+  ctx.font = "bold 17px";
   ctx.fillText(text, 0, 0);
   ctx.restore();
 }
@@ -325,7 +325,7 @@ if (carte.label) {
     ctx.save();
     ctx.translate(labelX, labelY);
     ctx.rotate(angle + Math.PI / 2);
-    ctx.font = "bold 18px Orbitron";
+    ctx.font = "bold 18px";
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
     ctx.fillText(carte.label, 0, 0);
@@ -368,7 +368,7 @@ if (carte.label) {
     ctx.translate(textX, textY);
     ctx.rotate(mid + Math.PI / 2);
     ctx.fillStyle = "white";
-    ctx.font = "bold 12px sans-serif";
+    ctx.font = "bold 12px";
     ctx.textAlign = "center";
     ctx.fillText(labels[i], 0, 0);
     ctx.restore();
@@ -433,7 +433,7 @@ if (carte.label) {
   // Description sur le masque incurvé
 if (currentDescription) {
   ctx.fillStyle = "white";
-  ctx.font = "bold 17px Orbitron";
+  ctx.font = "bold 17px";
   ctx.textAlign = "center";
   ctx.shadowColor = "black";
   ctx.shadowBlur = 4;
